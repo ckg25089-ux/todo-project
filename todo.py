@@ -5,7 +5,8 @@ todos = [
 
 
 def add_todo(title, priority="中"):
-    todos.apend({"title": title, "completed": False, "priority": priority})
+    todos.append({"title": title, "completed": False, "priority": priority})
+
 
 
 def show_todos():
