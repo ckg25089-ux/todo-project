@@ -4,9 +4,13 @@ todos = [
 ]
 
 
+def add_todo(title, priority="中"):
+    todos.apend({"title": title, "completed": False, "priority": priority})
+
+
 def show_todos():
     print("TODO一覧")
-    print("状態と優先度：高・中・低／[完了]は完了済み")
+    print("状態と優先度：高・中・低 / [完了]は完了済み")
 
     print(f"すべてのTODO（{len(todos)}件）")
     for todo in todos:
@@ -14,4 +18,5 @@ def show_todos():
         print(f'{status}{todo["title"]} [{todo["priority"]}]')
 
 
+add_todo("発表資料を作る", "高")
 show_todos()
